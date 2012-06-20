@@ -2,6 +2,9 @@ packages = Array.new
 
 case node[:lsb][:codename]
 when "lucid"
+  include_recipe "libcap"
+  include_recipe "libxml2"
+
   packages |= %w/
     liblwres60
   /
